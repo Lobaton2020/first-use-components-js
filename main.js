@@ -1,12 +1,15 @@
-import LoginComponent from "./components/login-component.js";
-import NavbarComponent from "./components/navbar-component.js";
-import NoteComponent from "./components/note-component.js";
-import ShowResultComponent from "./components/show-component.js";
+import Button from "./components/Button.js"
+import Card from "./components/Card.js"
+import List from "./components/List.js"
+import Config from "./providers/Config.js"
+import Header from "./components/Header.js"
 
-if (localStorage.getItem("session-js-notes")) {
-    customElements.define("app-navbar", NavbarComponent);
-    customElements.define("app-root", NoteComponent);
-    customElements.define("app-result", ShowResultComponent);
-} else {
-    customElements.define("app-root", LoginComponent);
-}
+const app = document.querySelector('#root');
+Config(app);
+app.appendChild(Header());
+app.appendChild(Button());
+app.appendChild(Card());
+app.appendChild(List());
+
+window.URL_MEET = "http://g.co/meet/new_";
+

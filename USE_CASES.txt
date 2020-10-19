@@ -1,0 +1,5 @@
+1. Integracion de materialize
+2, Crear boton
+3. Mostrar modal con el link para ser comparido
+4. Guardar links creados en localSstorage
+5. Mostrar listado de links generados.
